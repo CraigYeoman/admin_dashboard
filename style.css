@@ -15,7 +15,22 @@ body {
 
 .dashboard {
     grid-area: 1 / 1 / 3 / 2;
-    border: 3px solid;;
+    background-color: #0EA5E9;
+    padding-left: 1em;
+}
+
+.logo {
+    margin-top: 10px;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+h3 {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 24px auto;
+    gap: 5px;
 }
 
 .header {
@@ -51,6 +66,24 @@ body {
 
 .info-bar {
     grid-area: 2 / 2 / 4 / 4;
+    display: grid;
+    grid-template-rows: 1fr 1em 1fr;
+    gap: 10px;
+}
+
+.announcements {
     background-color: rgb(255, 0, 0);
 }
 
+.trending {
+    background-color: rgb(255, 0, 0);
+}
+
+h3 a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+h3 img{
+    filter: invert(95%) sepia(100%) saturate(20%) hue-rotate(11deg) brightness(106%) contrast(104%);
+}
