@@ -1,19 +1,24 @@
 :root {
     --main-background-color: #18181B;
     --main-text-color: #FBBF24;
+    --card-background-color: #ffffff;
+    --card-text-color: #1C1917;
+    --card-heading-text-color: #111827;
+    --card-svg-color: invert(7%) sepia(8%) saturate(963%) hue-rotate(341deg) brightness(96%) contrast(92%);
+    --box-shadow-cards: 0px 0px 3px #404040;
 }
 
 body {
     margin: 0;
     display: grid;
-    
+    justify-items: center;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
-    width: 950px;
+    width: 975px;
     height: 100vh;
 }
 
@@ -133,27 +138,49 @@ input[type="search"] {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 20px 1fr 1fr;
-    gap: 5px;
-    padding-top: 5px;
-    padding-left: 10px;
+    gap: 10px;
+    padding: 10px;
     background-color: #A1A1AA;
+    box-shadow: inset 0px 1px 5px #404040;
 }
 
 .cards {
     grid-area: 2 / 1 / 4 / 2;
-    background-color: blue;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
 .card {
-    background-color: aqua;
+    background-color: var(--card-background-color);
+    border-radius: 1em;
+    padding: 12px;
+    display: grid;
+    box-shadow: var(--box-shadow-cards);
+}
+
+.heading {
+    font-weight: bolder;
+    padding-bottom: 5px;
+    color: var(--card-heading-text-color);
+}
+
+.information {
+    color: var(--card-text-color);
+}
+
+.buttons {
+    justify-self: end;
+    align-self: end;
+}
+
+.buttons img {
+    filter: var(--card-svg-color);
 }
 
 .title {
     height: 1em;
-    width:auto
+    width: auto;
 }
 
 .info-bar {
@@ -164,11 +191,15 @@ input[type="search"] {
 }
 
 .announcements {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--card-background-color);
+    border-radius: 1em;
+    box-shadow: var(--box-shadow-cards);
 }
 
 .trending {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--card-background-color);
+    border-radius: 1em;
+    box-shadow: var(--box-shadow-cards);
 }
 
 h3 a{
